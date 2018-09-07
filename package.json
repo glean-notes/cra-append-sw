@@ -1,5 +1,5 @@
 {
-  "name": "cra-append-sw",
+  "name": "cra-append-sw-react-preset",
   "version": "2.4.0",
   "description": "Utility tool to append custom code to ServiceWorker created by Create React App",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bbhlondon/cra-append-sw.git"
+    "url": "git+https://github.com/sizeak/cra-append-sw/cra-append-sw.git"
   },
   "keywords": [
     "node",
