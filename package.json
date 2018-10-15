@@ -1,8 +1,8 @@
 {
   "name": "cra-append-sw-react-preset",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Utility tool to append custom code to ServiceWorker created by Create React App",
-  "main": "index.js",
+  "main": "./index.js",
   "preferGlobal": true,
   "bin": "./index.js",
   "scripts": {
@@ -24,16 +24,19 @@
   },
   "homepage": "https://github.com/bbhlondon/cra-append-sw#readme",
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-runtime": "^6.23.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "commander": "^2.15.1",
     "dotenv-webpack": "^1.5.5",
     "memory-fs": "^0.4.1",
     "path": "^0.12.7",
-    "webpack": "^3.12.0"
+    "webpack": "^4.8.3"
   },
   "publishConfig": {
     "registry": "https://nexus.dev.sonocent.com/repository/npm-private/"
