@@ -59,7 +59,7 @@ function compile(entry) {
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.js|\.tsx?$/,
           exclude: /(node_modules|bower_components)/,
           use: {
             loader: "babel-loader",
@@ -72,13 +72,17 @@ function compile(entry) {
                       browsers: ["defaults"]
                     }
                   }
-                ]
+                ],
+                "@babel/preset-typescript"
               ],
               plugins: ["@babel/plugin-transform-runtime"]
             }
           }
         }
       ]
+    },
+    resolve: {
+      extensions: [ '.tsx', '.ts', '.js' ]
     },
     plugins: [
       new Dotenv({
