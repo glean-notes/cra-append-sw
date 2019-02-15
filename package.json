@@ -24,18 +24,17 @@
   },
   "homepage": "https://github.com/bbhlondon/cra-append-sw#readme",
   "dependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-typescript": "^7.0.0",
-    "babel-preset-react-app": "^7.0.0",
-	"@babel/runtime": "^7.0.0",
-    "babel-loader": "^8.0.0",
-    "@babel/polyfill": "^7.0.0",
-    "commander": "^2.15.1",
-    "dotenv-webpack": "^1.5.5",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "babel-preset-react-app": "^7.0.1",
+    "@babel/runtime": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "@babel/polyfill": "^7.2.5",
+    "commander": "^2.19.0",
+    "dotenv-webpack": "^1.7.0",
     "memory-fs": "^0.4.1",
     "path": "^0.12.7",
-    "webpack": "^4.8.3"
+    "webpack": "^4.29.4"
   },
   "publishConfig": {
     "registry": "https://nexus.dev.sonocent.com/repository/npm-private/"
