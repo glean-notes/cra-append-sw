@@ -37,6 +37,6 @@
     "webpack": "^4.28.3"
   },
   "publishConfig": {
-    "registry": "https://nexus.dev.sonocent.com/repository/npm-private/"
+    "registry": "https://verdaccio.sonocent.dev"
   }
 }
