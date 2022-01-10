@@ -29,6 +29,8 @@ Install deps (`--no-optional` flag may be needed to avoid issues with `nan` pack
 npm install --no-optional
 ```
 
+Before updating, increment the version after the `-` in the `version` field in `package.json`.
+
 Publish:
 
 ```
