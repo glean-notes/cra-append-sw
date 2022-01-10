@@ -1,4 +1,41 @@
-# cra-append-sw
+# cra-append-sw-with-typescript
+
+An internal Glean fork of https://github.com/tszarzynski/cra-append-sw to add support for TypeScript.
+
+Main branch of our fork is `sonocent-package`.
+
+## Modify locally
+
+Change dependency in `frontend/walter/package.json` to a relative path to the local repo:
+
+```
+  "@sonocent/cra-append-sw-with-typescript": "../../../repos/work/cra-append-sw",
+```
+
+Then run `yarn` in the `frontend/walter` to pick up changes.
+
+## Publish
+
+Add NPM auth token to `~/.npmrc`
+
+```
+//npm.pkg.github.com/:_authToken=<AUTH TOKEN>
+```
+(You can likely find the auth token in `~/.yarnrc.yml`).
+
+Install deps (`--no-optional` flag may be needed to avoid issues with `nan` package):
+
+```
+npm install --no-optional
+```
+
+Publish:
+
+```
+npm publish
+```
+
+# Original README:
 
   Utility tool to append custom code to ServiceWorker created by [Create React App](https://github.com/facebookincubator/create-react-app). 
   
