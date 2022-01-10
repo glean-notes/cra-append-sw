@@ -59,7 +59,7 @@ function compile(entry) {
     module: {
       rules: [
         {
-          test: /\.js|\.tsx?$/,
+          test: /\.js$|\.tsx?$/,
           exclude: /(node_modules|bower_components)/,
           use: {
             loader: "babel-loader",
