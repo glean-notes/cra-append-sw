@@ -40,5 +40,8 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/sonocent"
+  },
+  "devDependencies": {
+    "@rbarilani/remove-source-map-url-webpack-plugin": "^0.1.0"
   }
 }
