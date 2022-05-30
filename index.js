@@ -5,6 +5,7 @@ const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
 const program = require("commander");
 const path = require("path");
+const RemoveSourceMapUrlWebpackPlugin = require('@rbarilani/remove-source-map-url-webpack-plugin');
 
 const BUILD_SW_FILE_PATH = "build/service-worker.js";
 const BUNDLE_FILE_NAME = "bundle.js";
@@ -89,8 +90,8 @@ function compile(entry) {
         path: program.env, // Path to .env file (this is the default)
         safe: false, // load .env.example (defaults to "false" which does not use dotenv-safe)
         silent: true
-      })
-      // new webpack.optimize.UglifyJsPlugin()
+      }),
+      new RemoveSourceMapUrlWebpackPlugin({})
     ]
   });
 
@@ -99,7 +100,6 @@ function compile(entry) {
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
       if (err) return reject(err);
-
       if (stats.hasErrors() || stats.hasWarnings()) {
         return reject(
           new Error(
