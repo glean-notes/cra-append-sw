@@ -1,6 +1,6 @@
 {
   "name": "@sonocent/cra-append-sw-with-typescript",
-  "version": "2.6.1-8",
+  "version": "2.6.1-10",
   "description": "Utility tool to append custom code to ServiceWorker created by Create React App",
   "main": "./index.js",
   "preferGlobal": true,
@@ -30,6 +30,7 @@
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/polyfill": "^7.2.5",
     "@babel/runtime": "^7.3.1",
+    "@rbarilani/remove-source-map-url-webpack-plugin": "^0.1.0",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^10.0.1",
     "commander": "^2.19.0",
@@ -40,8 +41,5 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/sonocent"
-  },
-  "devDependencies": {
-    "@rbarilani/remove-source-map-url-webpack-plugin": "^0.1.0"
   }
 }
