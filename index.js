@@ -6,6 +6,7 @@ const Dotenv = require("dotenv-webpack");
 const program = require("commander");
 const path = require("path");
 const RemoveSourceMapUrlWebpackPlugin = require('@rbarilani/remove-source-map-url-webpack-plugin');
+const process = require("process");
 
 const BUILD_SW_FILE_PATH = "build/service-worker.js";
 const BUNDLE_FILE_NAME = "bundle.js";
@@ -91,7 +92,10 @@ function compile(entry) {
         safe: false, // load .env.example (defaults to "false" which does not use dotenv-safe)
         silent: true
       }),
-      new RemoveSourceMapUrlWebpackPlugin({})
+      new RemoveSourceMapUrlWebpackPlugin({}),
+      new webpack.DefinePlugin({
+        'process.env.REACT_APP_VERSION': JSON.stringify(process.env.REACT_APP_VERSION),
+      })
     ]
   });
 
