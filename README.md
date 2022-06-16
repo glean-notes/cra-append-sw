@@ -9,10 +9,10 @@ Main branch of our fork is `sonocent-package`.
 Change dependency in `frontend/walter/package.json` to a relative path to the local repo:
 
 ```
-  "@sonocent/cra-append-sw-with-typescript": "../../../repos/work/cra-append-sw",
+  "@glean-notes/cra-append-sw-with-typescript": "../../../path/to/cra-append-sw",
 ```
 
-Then run `yarn` in the `frontend/walter` to pick up changes.
+Then run `yarn` in the `frontend/walter` directory to pick up changes.
 
 ## Publish
 
